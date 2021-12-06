@@ -22,22 +22,25 @@
             <div id="formCesar">
               <p>Vai decodificar ou Codificar?</p>
               <div>
-                <input class="radio" type="radio" name="cod" label="codificar" checked />
-                <label for="cod">Codificar</label>
+                <input type="radio" name="codDecod" label="cod" class="radio"/>
+                <label for="radio">Codificar</label>
               </div>
               <div>
-                <input class="radio" type="radio" name="decod" label="decodificar" />
-                <label for="decod">Decodificar</label>
+                <input type="radio" name="codDecod" label="decod" class="radio" />
+                <label for="radio">Decodificar</label>
               </div>
               <div>
                 <label for="pass">Quantos passos?</label>
-                <input type="range" value="13" max="26" id="pass" />
-                <span id="p-num">13</span>
+                <input type="range" value="13" min="0" max="26" oninput="this.nextElementSibling.value = this.value">
+                <output>24</output>
               </div>
-            <div>
+            <div class="msg">
               <p>Digite sua mensagem</p>
               <textarea></textarea>
-              <button id="codDec">Codificar</button>
+            </div>
+            <button id="codDec">Codificar</button>
+            <div class="msg2">
+              <textarea></textarea>
             </div>
           </div>
 
@@ -46,17 +49,24 @@
           <div id="formBase">
              <p>Vai decodificar ou Codificar?</p>
               <div>
-                <input type="radio" name="cod" label="codificar" checked />
+                <input type="radio" name="codDecod" label="cod" checked class="radio2" />
                 <label for="cod">Codificar</label>
               </div>
               <div>
-                <input type="radio" name="decod" label="decodificar" />
+                <input type="radio" name="codDecod" label="decod" class="radio2" />
                 <label for="decod">Decodificar</label>
               </div>
-            <div>
+            <div class="msg">
+              <!-- Texto a decodificar ou codificar -->
               <p>Digite sua mensagem</p>
               <textarea></textarea>
-              <button id="codDec">Codificar</button>
+              <!-- Texto a decodificar ou codificar -->
+            </div>
+            <button id="codDec2">Codificar</button>
+            <div class="msg2">
+            <!-- Texto codificado ou decodificado -->
+            <textarea></textarea>
+            <!-- Texto codificado ou decodificado -->
             </div>
           </div>
         </fieldset>

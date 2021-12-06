@@ -10,6 +10,7 @@ html {
 main {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 #box {
@@ -18,7 +19,20 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+.msg textarea {
+  width: 300px;
+  height: 30px;
+  padding-bottom: 10%;
+}
+
+.msg2 textarea {
+  width: 300px;
+  height: 30px;
+  padding-top: 10%;
 }
 
 #formCesar {
