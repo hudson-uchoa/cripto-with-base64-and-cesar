@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>Decodificador/Codificador</title>
+    <title>Criptografia</title>
   </head>
   <body>
     <header></header>
     <main>
         <fieldset id="box">
+          
           <h1>Selecione seu método de Criptografia</h1>
           <select id="s-metod">
             <option value="0">Escolha o método</option>
@@ -20,9 +21,9 @@
             <!-- Formulário de César -->
 
             <div id="formCesar">
-              <p>Vai decodificar ou Codificar?</p>
+              <p>Vai decodificar ou codificar?</p>
               <div>
-                <input type="radio" name="codDecod" label="cod" class="radio"/>
+                <input type="radio" name="codDecod" label="cod" checked class="radio" />
                 <label for="radio">Codificar</label>
               </div>
               <div>
@@ -31,41 +32,45 @@
               </div>
               <div>
                 <label for="pass">Quantos passos?</label>
-                <input type="range" value="13" min="0" max="26" oninput="this.nextElementSibling.value = this.value">
-                <output>24</output>
+                <input type="range" id="chavePasso" value="13" min="0" max="25" oninput="this.nextElementSibling.value = this.value">
+                <output>13</output>
               </div>
             <div class="msg">
+                <!-- Texto a decodificar ou codificar -->
               <p>Digite sua mensagem</p>
-              <textarea></textarea>
+              <textarea id="entrada"></textarea>
+                <!-- Texto a decodificar ou codificar -->
             </div>
-            <button id="codDec">Codificar</button>
+            <p id="codDec2">Codificado<br>|<br>\/</p>
             <div class="msg2">
-              <textarea></textarea>
+              <!-- Texto codificado ou decodificado -->
+              <textarea readonly id="saida"></textarea>
+              <!-- Texto codificado ou decodificado -->
             </div>
           </div>
 
           <!-- Formulario Base 64 -->
 
           <div id="formBase">
-             <p>Vai decodificar ou Codificar?</p>
+             <p>Vai decodificar ou codificar?</p>
               <div>
-                <input type="radio" name="codDecod" label="cod" checked class="radio2" />
+                <input type="radio" name="codDecod" label="cod" class="radio2" />
                 <label for="cod">Codificar</label>
               </div>
               <div>
                 <input type="radio" name="codDecod" label="decod" class="radio2" />
                 <label for="decod">Decodificar</label>
               </div>
-            <div class="msg">
+            <div id="msg">
               <!-- Texto a decodificar ou codificar -->
               <p>Digite sua mensagem</p>
-              <textarea></textarea>
+              <textarea id="entrada2"></textarea>
               <!-- Texto a decodificar ou codificar -->
             </div>
-            <button id="codDec2">Codificar</button>
-            <div class="msg2">
+            <p id="codDec2">Codificado<br>|<br>\/</p>
+            <div id="msg2">
             <!-- Texto codificado ou decodificado -->
-            <textarea></textarea>
+            <textarea readonly id="saida2"></textarea>
             <!-- Texto codificado ou decodificado -->
             </div>
           </div>

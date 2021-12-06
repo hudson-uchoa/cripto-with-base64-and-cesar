@@ -6,6 +6,11 @@ html {
   margin: 0px;
   border: 0px;
 }
+body {
+  background-image: url(./gif/dbdhoju-2953e0d9-f588-4611-8856-a1669bd066b1.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
 main {
   display: flex;
@@ -14,6 +19,7 @@ main {
 }
 
 #box {
+  background-color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -23,24 +29,46 @@ main {
   padding: 1%;
 }
 
+#formCesar {
+  text-align: center;
+  display: none;
+  flex-direction: column;
+}
+
 .msg textarea {
   width: 300px;
   height: 30px;
-  padding-bottom: 10%;
+  margin-bottom: 3%;
 }
 
 .msg2 textarea {
   width: 300px;
   height: 30px;
-  padding-top: 10%;
+  margin-top: 3%;
 }
 
-#formCesar {
-  display: none;
-  flex-direction: column;
+#formCesar button {
+  width: 310px;
 }
 
 #formBase {
+  text-align: center;
   display: none;
   flex-direction: column;
+}
+
+#msg textarea {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 3%;
+}
+
+#msg2 textarea {
+  width: 300px;
+  height: 30px;
+  margin-top: 3%;
+}
+
+#formBase button {
+  width: 310px;
 }
