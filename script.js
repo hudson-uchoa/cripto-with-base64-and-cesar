@@ -24,38 +24,36 @@ var radioBase = document.querySelectorAll(".radio2");
 var btnCodDecod = document.getElementById("codDec");
 var btnCodDecod2 = document.getElementById("codDec2");
 
-// radioCesar[0].addEventListener("click", function () {
-//   if (radioCesar[0].checked) {
-//     btnCodDecod.innerText = "Codificado\n|\n\/";
-//   }
-// });
+radioCesar[0].addEventListener("click", function () {
+  if (radioCesar[0].checked) {
+    btnCodDecod.innerText = "Codificado\n|\n/";
+  }
+});
 
-// radioCesar[1].addEventListener("click", function () {
-//   if (radioCesar[1].checked) {
-//     btnCodDecod.innerText = "Decodificar<br>|<br>\/";
-//   }
-// });
+radioCesar[1].addEventListener("click", function () {
+  if (radioCesar[1].checked) {
+    btnCodDecod.innerText = "Decodificar<br>|<br>/";
+  }
+});
 
-// radioBase[0].addEventListener("click", function () {
-//   if (radioBase[0].checked) {
-//     btnCodDecod2.innerText = "Codificar<br>|<br>\/";
-//   }
-// });
+radioBase[0].addEventListener("click", function () {
+  if (radioBase[0].checked) {
+    btnCodDecod2.innerText = "Codificar<br>|<br>/";
+  }
+});
 
-// radioBase[1].addEventListener("click", function () {
-//   if (radioBase[1].checked) {
-//     btnCodDecod2.innerText = "Decodificar<br>|<br>\/";
-//   }
-// });
+radioBase[1].addEventListener("click", function () {
+  if (radioBase[1].checked) {
+    btnCodDecod2.innerText = "Decodificar<br>|<br>/";
+  }
+});
 
 // Criptografia Cifra de César
 
 var entrada = document.getElementById("entrada");
-var entradaBase = document.getElementById("entrada2");
 var saida = document.getElementById("saida");
-var saida2 = document.getElementById("saida2");
 var chavePasso = document.getElementById("chavePasso");
-var valueChave
+var valueChave;
 
 entrada.addEventListener("keyup", function () {
   if (radioCesar[0].checked) {
@@ -89,9 +87,13 @@ function decodifica(texto, chavePasso) {
     .map((str) => {
       var cripto = str.charCodeAt();
       if (cripto >= 65 && cripto <= 90) {
-        return String.fromCharCode(cripto - 65 - chavePasso < 0)?String.fromCharCode(((cripto - 65 - chavePasso +26) % 26) + 65):String.fromCharCode(((cripto -65 -chavePasso)%26)+65);
+        return String.fromCharCode(cripto - 65 - chavePasso < 0)
+          ? String.fromCharCode(((cripto - 65 - chavePasso + 26) % 26) + 65)
+          : String.fromCharCode(((cripto - 65 - chavePasso) % 26) + 65);
       } else if (cripto >= 97 && cripto <= 122) {
-        return String.fromCharCode(cripto - 97 - chavePasso <0)?String.fromCharCode(((cripto - 97 - chavePasso +26) % 26) + 97):String.fromCharCode(((cripto -97 - chavePasso)%26)+65);
+        return String.fromCharCode(cripto - 97 - chavePasso < 0)
+          ? String.fromCharCode(((cripto - 97 - chavePasso + 26) % 26) + 97)
+          : String.fromCharCode(((cripto - 97 - chavePasso) % 26) + 65);
       } else {
         return str;
       }
@@ -100,6 +102,8 @@ function decodifica(texto, chavePasso) {
 }
 
 // Criptografia do Base64
+var entradaBase = document.getElementById("entrada2");
+var saida2 = document.getElementById("saida2");
 
 entradaBase.addEventListener("keyup", function () {
   if (radioBase[0].checked) {
