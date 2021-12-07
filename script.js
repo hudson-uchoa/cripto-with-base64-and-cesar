@@ -4,7 +4,7 @@ var metodo = document.getElementById("s-metod");
 var formCesar = document.getElementById("formCesar");
 var formBase = document.getElementById("formBase");
 
-metodo.addEventListener("click", function () {
+metodo.addEventListener("change", function () {
   if (metodo.value == 0) {
     formCesar.style.display = "none";
     formBase.style.display = "none";
@@ -26,25 +26,25 @@ var btnCodDecod2 = document.getElementById("codDec2");
 
 radioCesar[0].addEventListener("click", function () {
   if (radioCesar[0].checked) {
-    btnCodDecod.innerText = "Codificado\n|\n/";
+    btnCodDecod.innerHTML = "Codificado";
   }
 });
 
 radioCesar[1].addEventListener("click", function () {
   if (radioCesar[1].checked) {
-    btnCodDecod.innerText = "Decodificar<br>|<br>/";
+    btnCodDecod.innerHTML = "Decodificado";
   }
 });
 
 radioBase[0].addEventListener("click", function () {
   if (radioBase[0].checked) {
-    btnCodDecod2.innerText = "Codificar<br>|<br>/";
+    btnCodDecod2.innerHTML = "Codificado";
   }
 });
 
 radioBase[1].addEventListener("click", function () {
   if (radioBase[1].checked) {
-    btnCodDecod2.innerText = "Decodificar<br>|<br>/";
+    btnCodDecod2.innerHTML = "Decodificado";
   }
 });
 
@@ -104,13 +104,15 @@ function decodifica(texto, chavePasso) {
 // Criptografia do Base64
 var entradaBase = document.getElementById("entrada2");
 var saida2 = document.getElementById("saida2");
+var baseValue;
 
 entradaBase.addEventListener("keyup", function () {
+  baseValue = entradaBase.value;
   if (radioBase[0].checked) {
+    saida2.value = btoa(baseValue);
+  } else if (radioBase[1].checked) {
+    saida2.value = atob(baseValue);
   } else {
+    return 0;
   }
 });
-
-function base64(input) {
-  return btoa(input);
-}
