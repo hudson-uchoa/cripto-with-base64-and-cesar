@@ -1,4 +1,4 @@
-@media (max-width: 2000px) {
+@media (max-width: 800px) {
   #box {
     font-size: 40px;
   }
@@ -9,6 +9,12 @@
   }
 
   #formCesar textarea {
+    font-size: 40px;
+    width: 400px;
+    height: 100px;
+  }
+
+  #formBase textarea {
     font-size: 40px;
     width: 400px;
     height: 100px;

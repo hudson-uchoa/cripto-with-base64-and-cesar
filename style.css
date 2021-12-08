@@ -13,7 +13,8 @@ body {
   background-image: url(./gif/dbdhoju-2953e0d9-f588-4611-8856-a1669bd066b1.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: auto;
+  height: 90%;
 }
 
 header {
