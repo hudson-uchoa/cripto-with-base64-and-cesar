@@ -1,0 +1,16 @@
+@media (max-width: 2000px) {
+  #box {
+    font-size: 40px;
+  }
+
+  #box select {
+    font-size: 60px;
+    height: 200px;
+  }
+
+  #formCesar textarea {
+    font-size: 40px;
+    width: 400px;
+    height: 100px;
+  }
+}

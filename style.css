@@ -12,7 +12,8 @@ body {
   font-family: "ABeeZee", sans-serif;
   background-image: url(./gif/dbdhoju-2953e0d9-f588-4611-8856-a1669bd066b1.gif);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -53,6 +54,7 @@ main {
   font-size: 15px;
   width: 50%;
   height: 30%;
+  border-radius: 18px;
 }
 
 #formCesar {
