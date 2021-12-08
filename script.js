@@ -68,18 +68,25 @@ entrada.addEventListener("keyup", function () {
 });
 
 function codifica(texto, chavePasso) {
-  return texto
-    .map((str) => {
-      var cripto = str.charCodeAt();
-      if (cripto >= 65 && cripto <= 90) {
-        return String.fromCharCode(((cripto - 65 + chavePasso) % 26) + 65);
-      } else if (cripto >= 97 && cripto <= 122) {
-        return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97);
-      } else {
-        return str;
-      }
-    })
-    .join("");
+  return (
+    texto
+      // map é um for que transforma string em array automaticamente
+      .map((str) => {
+        // famosa arrow function
+        var cripto = str.charCodeAt();
+        // limitar o ascii a letras do alfabeto maiusculas e minusculas
+        if (cripto >= 65 && cripto <= 90) {
+          // retornar em string
+          return String.fromCharCode(((cripto - 65 + chavePasso) % 26) + 65);
+        } else if (cripto >= 97 && cripto <= 122) {
+          return String.fromCharCode(((cripto - 97 + chavePasso) % 26) + 97);
+        } else {
+          return str;
+        }
+      })
+      // juntar tudo em uma string novamente
+      .join("")
+  );
 }
 
 function decodifica(texto, chavePasso) {
