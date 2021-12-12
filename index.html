@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="display.css" >
+    <link rel="stylesheet" href="display.css" />
     <title>Criptografia</title>
   </head>
   <body>
@@ -11,38 +11,49 @@
       <h1>Criptografia de César ou Base64</h1>
     </header>
     <main>
-        <fieldset id="box">
-          
-          <h1>Selecione seu método de Criptografia</h1>
-          <select id="s-metod">
-            <option value="0">Escolha o método</option>
-            <option value="1" id="cifra">Cifra de César</option>
-            <option value="2" id="base64">Base 64</option>
-          </select> 
-          <form id="form">
+      <fieldset id="box">
+        <h1>Selecione seu método de Criptografia</h1>
+        <select id="s-metod">
+          <option value="0">Escolha o método</option>
+          <option value="1" id="cifra">Cifra de César</option>
+          <option value="2" id="base64">Base 64</option>
+        </select>
+        <form id="form">
+          <!-- Formulário de César -->
 
-            <!-- Formulário de César -->
-
-            <div id="formCesar">
-              <p>Vai decodificar ou codificar?</p>
-              <div>
-                <input type="radio" name="codDecod" label="cod" checked class="radio" />
-                <label for="radio">Codificar</label>
-              </div>
-              <div>
-                <input type="radio" name="codDecod" label="decod" class="radio" />
-                <label for="radio">Decodificar</label>
-              </div>
-              <div id="passos">
-                <label for="pass">Quantos passos?</label>
-                <input type="range" id="chavePasso" value="13" min="0" max="25" oninput="this.nextElementSibling.value = this.value">
-                <output>13</output>
-              </div>
+          <div id="formCesar">
+            <p>Vai decodificar ou codificar?</p>
+            <div>
+              <input
+                type="radio"
+                name="codDecod"
+                label="cod"
+                checked
+                class="radio"
+              />
+              <label for="radio">Codificar</label>
+            </div>
+            <div>
+              <input type="radio" name="codDecod" label="decod" class="radio" />
+              <label for="radio">Decodificar</label>
+            </div>
+            <div id="passos">
+              <label for="pass">Quantos passos?</label>
+              <input
+                type="range"
+                id="chavePasso"
+                value="13"
+                min="0"
+                max="25"
+                oninput="this.nextElementSibling.value = this.value"
+              />
+              <output>13</output>
+            </div>
             <div class="msg">
-                <!-- Texto a decodificar ou codificar -->
+              <!-- Texto a decodificar ou codificar -->
               <p>Digite sua mensagem:</p>
               <textarea id="entrada"></textarea>
-                <!-- Texto a decodificar ou codificar -->
+              <!-- Texto a decodificar ou codificar -->
             </div>
             <p id="codDec">Resultado codificado:</p>
             <div class="msg2">
@@ -55,15 +66,20 @@
           <!-- Formulario Base 64 -->
 
           <div id="formBase">
-             <p>Vai decodificar ou codificar?</p>
-              <div>
-                <input type="radio" name="codDecod" label="cod" class="radio2" />
-                <label for="cod">Codificar</label>
-              </div>
-              <div>
-                <input type="radio" name="codDecod" label="decod" class="radio2" />
-                <label for="decod">Decodificar</label>
-              </div>
+            <p>Vai decodificar ou codificar?</p>
+            <div>
+              <input type="radio" name="codDecod" label="cod" class="radio2" />
+              <label for="cod">Codificar</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="codDecod"
+                label="decod"
+                class="radio2"
+              />
+              <label for="decod">Decodificar</label>
+            </div>
             <div id="msg">
               <!-- Texto a decodificar ou codificar -->
               <p>Digite sua mensagem:</p>
@@ -72,12 +88,13 @@
             </div>
             <p id="codDec2">Resultado codificado:</p>
             <div id="msg2">
-            <!-- Texto codificado ou decodificado -->
-            <textarea readonly id="saida2"></textarea>
-            <!-- Texto codificado ou decodificado -->
+              <!-- Texto codificado ou decodificado -->
+              <textarea readonly id="saida2"></textarea>
+              <!-- Texto codificado ou decodificado -->
             </div>
           </div>
-        </fieldset>
+        </form>
+      </fieldset>
     </main>
     <script src="./script.js"></script>
   </body>
