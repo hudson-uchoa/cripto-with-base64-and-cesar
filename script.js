@@ -70,7 +70,7 @@ entrada.addEventListener("keyup", function () {
 function codifica(texto, chavePasso) {
   return (
     texto
-      // map é um for que transforma string em array automaticamente
+      // map é um for que mapeia o array
       .map((str) => {
         // famosa arrow function
         var cripto = str.charCodeAt();
@@ -92,7 +92,7 @@ function codifica(texto, chavePasso) {
 function decodifica(texto, chavePasso) {
   return (
     texto
-      // map é um for que transforma string em array automaticamente
+      // map é um for que mapeia o array
       .map((str) => {
         // famosa arrow function
         var cripto = str.charCodeAt();
